@@ -11,10 +11,10 @@
     command: p4c -b bmv2 /vagrant/code/int.p4 -o /vagrant/code/int.bmv2
     become: yes
   - name: Start Bmv2 Switch
-    shell: simple_switch --device-id 1 --thrift-port 9090 --interface 0@enp0s9 --interface 1@enp0s10  /vagrant/code/int.bmv2/int.json &
+    shell: simple_switch --device-id 2 --thrift-port 9090 --interface 0@enp0s9 --interface 1@enp0s10  /vagrant/code/int.bmv2/int.json &
     async: 1000
     poll: 5
     become: yes
   - name: Insert entries in switch table by control plane
-    shell: cat /vagrant/code/table.txt | simple_switch_CLI
+    shell: cat /vagrant/code/table2.txt | simple_switch_CLI
     become: yes
