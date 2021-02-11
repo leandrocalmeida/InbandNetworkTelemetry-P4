@@ -7,6 +7,6 @@ This is my first lab to use In-band Network Telemetry with P4. To use this lab, 
 
 # Purpose of the lab
 
-Use In-band Network Telemetry to collect metadatas from BMv2 switches. 
+Use In-band Network Telemetry to collect metadata from BMv2 switches. 
 
 # Topology
