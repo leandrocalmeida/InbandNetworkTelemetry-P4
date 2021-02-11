@@ -1,0 +1,3 @@
+table_set_default swtrace add_swtrace  1
+table_add ipv4_lpm ipv4_forward 192.168.50.11/32 => 08:00:27:60:0c:50  0
+table_add ipv4_lpm ipv4_forward 192.168.50.12/32 => 08:00:27:1d:e0:27 1

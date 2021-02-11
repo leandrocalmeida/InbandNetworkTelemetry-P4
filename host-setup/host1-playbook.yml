@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+  - name: Install python-Scapy and dependencies
+    apt: name={{ item }} update_cache=yes
+    loop: ['python3-scapy','net-tools']
+    become: yes
+
+  - name: Adjust arp table
+    command: arp -i enp0s8 -s 192.168.50.12 08:00:27:1d:e0:27
+    become: yes
